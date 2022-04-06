@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 69211698}
   - component: {fileID: 69211697}
   - component: {fileID: 69211696}
+  - component: {fileID: 69211699}
   m_Layer: 5
   m_Name: Blue-Button
   m_TagString: Untagged
@@ -204,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 69211697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69211699}
+        m_TargetAssemblyTypeName: ClickOnPins, Assembly-CSharp
+        m_MethodName: ClickOnPin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &69211697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69211694}
   m_CullTransparentMesh: 1
+--- !u!114 &69211699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69211694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e5cff09a8ffea48bcc5feaafb2e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &120810456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1097,7 @@ GameObject:
   - component: {fileID: 815922900}
   - component: {fileID: 815922899}
   - component: {fileID: 815922898}
+  - component: {fileID: 815922901}
   m_Layer: 5
   m_Name: White-Button
   m_TagString: Untagged
@@ -1141,7 +1167,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815922899}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 815922901}
+        m_TargetAssemblyTypeName: ClickOnPins, Assembly-CSharp
+        m_MethodName: ClickOnPin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &815922899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1180,6 +1218,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815922896}
   m_CullTransparentMesh: 1
+--- !u!114 &815922901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815922896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e5cff09a8ffea48bcc5feaafb2e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823646216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1497,7 @@ GameObject:
   - component: {fileID: 866736645}
   - component: {fileID: 866736644}
   - component: {fileID: 866736643}
+  - component: {fileID: 866736646}
   m_Layer: 5
   m_Name: Yellow-Button
   m_TagString: Untagged
@@ -1516,7 +1567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 866736644}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 866736646}
+        m_TargetAssemblyTypeName: ClickOnPins, Assembly-CSharp
+        m_MethodName: ClickOnPin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &866736644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,6 +1618,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866736641}
   m_CullTransparentMesh: 1
+--- !u!114 &866736646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866736641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e5cff09a8ffea48bcc5feaafb2e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &868632460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,6 +2042,7 @@ GameObject:
   - component: {fileID: 1108426826}
   - component: {fileID: 1108426825}
   - component: {fileID: 1108426824}
+  - component: {fileID: 1108426827}
   m_Layer: 5
   m_Name: Green-Button
   m_TagString: Untagged
@@ -2036,7 +2112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1108426825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1108426827}
+        m_TargetAssemblyTypeName: ClickOnPins, Assembly-CSharp
+        m_MethodName: ClickOnPin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1108426825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,6 +2163,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108426822}
   m_CullTransparentMesh: 1
+--- !u!114 &1108426827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108426822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e5cff09a8ffea48bcc5feaafb2e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145793326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2263,7 @@ GameObject:
   - component: {fileID: 1170803008}
   - component: {fileID: 1170803009}
   - component: {fileID: 1170803010}
+  - component: {fileID: 1170803011}
   m_Layer: 0
   m_Name: -----GAME MANAGER-----
   m_TagString: Untagged
@@ -2218,6 +2319,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0e8751d304aed784db2d5a14efcbce77, type: 3}
   - {fileID: 21300000, guid: 8c3f61e31e7e12f4ba965a25e06392de, type: 3}
   - {fileID: 21300000, guid: 9ae5b5551bf593f4b84e6feb2991e174, type: 3}
+--- !u!114 &1170803011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170803007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204c62eb1b060bd49b75ed15fabd8078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passcodePins: []
 --- !u!1 &1191452103
 GameObject:
   m_ObjectHideFlags: 0

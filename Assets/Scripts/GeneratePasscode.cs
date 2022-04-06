@@ -7,7 +7,7 @@ public class GeneratePasscode : MonoBehaviour
     public GameObject tilePrefab;
     public static List<GameObject> PasscodeList;
     public GameObject tileParent;
-
+    public static bool passcodeGenerated;
     public Sprite[] pins;
     void Start()
     {
@@ -22,6 +22,7 @@ public class GeneratePasscode : MonoBehaviour
           GameObject newTile = Instantiate(tilePrefab, new Vector3(0, 0, 0), Quaternion.identity);
                 newTile.gameObject.transform.SetParent(tileParent.gameObject.transform);
                 newTile.GetComponent<Button>().interactable = false;
+            newTile.gameObject.tag = "Passcode";
                 int rand = Random.Range(0, 5);
                 newTile.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pins[rand];
                 Color color = newTile.transform.GetChild(0).gameObject.GetComponent<Image>().color;
@@ -29,5 +30,6 @@ public class GeneratePasscode : MonoBehaviour
                 PasscodeList.Add(newTile);
  
         }
+        passcodeGenerated = true;
     }
 }
