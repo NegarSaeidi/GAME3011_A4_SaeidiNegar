@@ -12,9 +12,10 @@ public class GridGeneration : MonoBehaviour
     public static int selectedTile;
     public static int gridSize;
     public static int LasttIndexClicked;
+    public static bool regenerateTiles;
     void Start()
     {
-        gridSize = 5;
+        gridSize = 10;
         tilesList = new List<GameObject>();
         generateTiles(gridSize); 
     }
@@ -22,8 +23,17 @@ public class GridGeneration : MonoBehaviour
  
     void Update()
     {
-        
+        if(regenerateTiles)
+        {
+           
+            DestoryTiles();
+            generateTiles(gridSize);
+            regenerateTiles = false;
+
+        }
     }
+
+  
     private void generateTiles(int size)
     {
         for (int i = 1; i <= size; i++)
@@ -44,5 +54,23 @@ public class GridGeneration : MonoBehaviour
 
 
         }
+    }
+    private void DestoryTiles()
+    {
+        
+            for (int j = 0; j <tilesList.Count; j++)
+            {
+
+
+            Destroy(tilesList[j].gameObject);
+
+         
+         
+
+
+
+  
+            }
+        tilesList.Clear();
     }
 }

@@ -17,34 +17,37 @@ public class ActivateNextRow : MonoBehaviour
         var index = 0;
         for (int i = 0; i < 5; i++)
             tileIsSet[i] = false;
-        for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
+        if (!GridGeneration.regenerateTiles)
         {
-            if (GridGeneration.tilesList[i].transform.GetChild(0).GetComponent<Image>().sprite)
+            for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
             {
-                tileIsSet[index] = true;
-              
+                if (GridGeneration.tilesList[i].transform.GetChild(0).GetComponent<Image>().sprite)
+                {
+                    tileIsSet[index] = true;
+
+                }
+                index++;
             }
-            index++;
-        }
-        if (tileIsSet[0] && tileIsSet[1] && tileIsSet[2] && tileIsSet[3] && tileIsSet[4])
-        {
-            CheckForWin.checkForHintWin = true;
-            for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
-                GridGeneration.tilesList[i].GetComponent<Button>().interactable = false;
-         
-          
+            if (tileIsSet[0] && tileIsSet[1] && tileIsSet[2] && tileIsSet[3] && tileIsSet[4])
+            {
+                CheckForWin.checkForHintWin = true;
+                for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
+                    GridGeneration.tilesList[i].GetComponent<Button>().interactable = false;
 
-        }
-        if(openNextRow)
-        {
-            openNextRow = false;
-            CheckForWin.checkForHintWin = false;
-            GridGeneration.LasttIndexClicked += 5;
-            print("----" + GridGeneration.LasttIndexClicked);
 
-            for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
-                GridGeneration.tilesList[i].GetComponent<Button>().interactable = true;
 
+            }
+            if (openNextRow)
+            {
+                openNextRow = false;
+                CheckForWin.checkForHintWin = false;
+                GridGeneration.LasttIndexClicked += 5;
+                print("----" + GridGeneration.LasttIndexClicked);
+
+                for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
+                    GridGeneration.tilesList[i].GetComponent<Button>().interactable = true;
+
+            }
         }
     }
 }

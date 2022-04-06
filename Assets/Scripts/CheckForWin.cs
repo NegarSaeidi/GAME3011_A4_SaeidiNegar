@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class CheckForWin : MonoBehaviour
 {
     public static bool checkForHintWin;
     public GameObject[] passcodePins;
     public GameObject cover;
+    public TextMeshProUGUI colorHint;
+    public TextMeshProUGUI placeHint;
+
     void Start()
     {
 
@@ -88,6 +92,8 @@ public class CheckForWin : MonoBehaviour
             if (pinColorsAndPlace[i])
                 placeCounter++;
         }
+        colorHint.text = colorCounter + "  pins(s) have correct colors";
+        placeHint.text = placeCounter + "  pin(s) have correct colors and are in the correct spots";
         print(colorCounter+ " colors are correct and " + placeCounter +" color and place");
     }
 }
