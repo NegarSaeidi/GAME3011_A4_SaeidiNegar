@@ -6,6 +6,7 @@ public class ActivateNextRow : MonoBehaviour
 {
     private bool[] tileIsSet;
    public static bool openNextRow;
+    public GameObject gameoverPanel;
     void Start()
     {
         tileIsSet = new bool[5];
@@ -41,11 +42,19 @@ public class ActivateNextRow : MonoBehaviour
             {
                 openNextRow = false;
                 CheckForWin.checkForHintWin = false;
-                GridGeneration.LasttIndexClicked += 5;
-                print("----" + GridGeneration.LasttIndexClicked);
+                if (GridGeneration.LasttIndexClicked== GridGeneration.tilesList.Count-1)
+                {
+                    gameoverPanel.SetActive(true);
+                }
+                else
+                {
+                    GridGeneration.LasttIndexClicked += 5;
+                    print("----" + GridGeneration.LasttIndexClicked);
 
-                for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
-                    GridGeneration.tilesList[i].GetComponent<Button>().interactable = true;
+                    for (int i = GridGeneration.LasttIndexClicked - 4; i <= GridGeneration.LasttIndexClicked; i++)
+                        GridGeneration.tilesList[i].GetComponent<Button>().interactable = true;
+                }
+               
 
             }
         }
