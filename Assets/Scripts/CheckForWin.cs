@@ -6,6 +6,7 @@ public class CheckForWin : MonoBehaviour
 {
     public static bool checkForHintWin;
     public GameObject[] passcodePins;
+    public GameObject cover;
     void Start()
     {
 
@@ -20,14 +21,15 @@ public class CheckForWin : MonoBehaviour
         if (GeneratePasscode.passcodeGenerated)
         {
             passcodePins = GameObject.FindGameObjectsWithTag("Passcode");
-            checkForHintWin = true;
+           
           
         }
         if (checkForHintWin)
         {
-         
+          
             checkWinCondition();
-            print(CheckForExisitingColors());
+            CheckForExisitingColors();
+            ActivateNextRow.openNextRow = true;
         }
     }
     private void checkWinCondition()
@@ -43,36 +45,49 @@ public class CheckForWin : MonoBehaviour
         
          if(pins[0] && pins[1] && pins[2] && pins[3] && pins[4] )
         {
+            cover.gameObject.SetActive(false);
             print("WIN");
         }
        
     }
 
-    private int CheckForExisitingColors()
+    private void CheckForExisitingColors()
     {
         int index = 0;
         bool[] pinColors = new bool[5];
-        int counter = 0;
-        for (int i = 0; i < passcodePins.Length; i++)
+        bool[] pinColorsAndPlace = new bool[5];
+        int colorCounter = 0;
+        int placeCounter = 0;
+        for (int j = GridGeneration.LasttIndexClicked - 4; j <= GridGeneration.LasttIndexClicked; j++)
+    
         {
-            for (int j = GridGeneration.LasttIndexClicked - 4; j <= GridGeneration.LasttIndexClicked; j++)
+            for (int i = 0; i < passcodePins.Length; i++)
             {
                
                     if (passcodePins[i].transform.GetChild(0).GetComponent<Image>().sprite == GridGeneration.tilesList[j].transform.GetChild(0).GetComponent<Image>().sprite)
                 {
                     pinColors[index] = true;
-                  
+                    if ((i % 5) == (j % 5))
+                        pinColorsAndPlace[index] = true;
+                 
+                       
+                    
                 }
                    
 
             }
             index++;
         }
-        for (int i = 0; i <5; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (pinColors[i])
-                counter++;
+                colorCounter++;
         }
-        return counter;
+        for (int i = 0; i <5; i++)
+        {
+            if (pinColorsAndPlace[i])
+                placeCounter++;
+        }
+        print(colorCounter+ " colors are correct and " + placeCounter +" color and place");
     }
 }

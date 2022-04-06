@@ -2264,6 +2264,8 @@ GameObject:
   - component: {fileID: 1170803009}
   - component: {fileID: 1170803010}
   - component: {fileID: 1170803011}
+  - component: {fileID: 1170803012}
+  - component: {fileID: 1170803013}
   m_Layer: 0
   m_Name: -----GAME MANAGER-----
   m_TagString: Untagged
@@ -2332,6 +2334,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   passcodePins: []
+  cover: {fileID: 243873850}
+--- !u!114 &1170803012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170803007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5473adcd1485215429e393dbf23db3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1170803013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170803007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbff743118fd0d44b9e0a7827108b83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 2101796533}
 --- !u!1 &1191452103
 GameObject:
   m_ObjectHideFlags: 0
