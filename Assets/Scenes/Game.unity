@@ -3196,6 +3196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2101796533}
+  gameOverPanel: {fileID: 1579668925}
 --- !u!224 &1170803014
 RectTransform:
   m_ObjectHideFlags: 0
