@@ -10,6 +10,7 @@ public class LevelOfDifficulty : MonoBehaviour
     {
         GridGeneration.gridSize = 10;
         GridGeneration.regenerateTiles = true;
+        Timer.time = 300;
         colorHint.text =  "";
         placeHint.text =  "";
     }
@@ -17,6 +18,7 @@ public class LevelOfDifficulty : MonoBehaviour
     {
         GridGeneration.gridSize = 5;
         GridGeneration.regenerateTiles = true;
+        Timer.time = 150;
         colorHint.text = "";
         placeHint.text = "";
     }
@@ -24,6 +26,7 @@ public class LevelOfDifficulty : MonoBehaviour
     {
         GridGeneration.gridSize =3;
         GridGeneration.regenerateTiles = true;
+        Timer.time = 120;
         colorHint.text = "";
         placeHint.text = "";
     }
