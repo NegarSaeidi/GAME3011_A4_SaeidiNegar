@@ -9,12 +9,25 @@ public class GeneratePasscode : MonoBehaviour
     public GameObject tileParent;
     public static bool passcodeGenerated;
     public Sprite[] pins;
+    public static bool regeneratePasscode;
+
     void Start()
     {
         PasscodeList = new List<GameObject>();
+        regeneratePasscode = false;
         generateTiles();
     }
-
+    private void Update()
+    {
+        if(regeneratePasscode)
+        {
+            regeneratePasscode = false;
+            for (int i = 0; i < 5; i++)
+                Destroy(PasscodeList[i].gameObject);
+                PasscodeList.Clear();
+            generateTiles();
+        }
+    }
     private void generateTiles()
     {
         for (int i = 1; i <= 5; i++)
@@ -23,7 +36,7 @@ public class GeneratePasscode : MonoBehaviour
                 newTile.gameObject.transform.SetParent(tileParent.gameObject.transform);
                 newTile.GetComponent<Button>().interactable = false;
             newTile.gameObject.tag = "Passcode";
-                int rand = Random.Range(0, 5);
+                int rand = Random.Range(0, PlayerSkill.pinCount);
                 newTile.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pins[rand];
                 Color color = newTile.transform.GetChild(0).gameObject.GetComponent<Image>().color;
                 newTile.transform.GetChild(0).gameObject.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 255);

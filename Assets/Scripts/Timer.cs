@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public GameObject gameOverPanel;
     private void Start()
     {
-        time = 500;
+        time = 300;
     }
     void Update()
     {
