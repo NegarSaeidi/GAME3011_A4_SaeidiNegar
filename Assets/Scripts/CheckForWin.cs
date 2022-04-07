@@ -10,6 +10,7 @@ public class CheckForWin : MonoBehaviour
     public GameObject cover;
     public TextMeshProUGUI colorHint;
     public TextMeshProUGUI placeHint;
+    public GameObject winPanel;
 
     void Start()
     {
@@ -51,6 +52,7 @@ public class CheckForWin : MonoBehaviour
         {
             cover.gameObject.SetActive(false);
             print("WIN");
+            winPanel.SetActive(true);
         }
        
     }
